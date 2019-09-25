@@ -1,0 +1,93 @@
+.container{
+  width: 85%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 999;
+  position: fixed;
+  right: 0;
+}
+
+/* 确认取消按钮 */
+.cancel{
+  width: 40%;
+  height: 90rpx;
+  float: left;
+  margin: 0 2% 0 8%;
+  background-color: #F5F5F5;
+  font-size: 16px;
+  color: #212121;
+  line-height: 42px;
+  text-align: center;
+  border-radius: 10rpx;
+}
+.define{
+  width: 40%;
+  height: 90rpx;
+  float: left;
+  margin: 0 8% 0 2%;
+  background-color: #4A88F7;
+  font-size: 16px;
+  color: #FEFCFF;
+  line-height: 42px;
+  text-align: center;
+  border-radius: 10rpx;
+}
+
+/* 弹出效果 */
+.container.false {
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transition: all 0.3s cubic-bezier(0, 0.54, 0.51, 0.99);
+  -webikit-transition: all 0.3s cubic-bezier(0, 0.54, 0.51, 0.99);
+  opacity: 1;
+}
+.container.true {
+  transform: translateX(0%);
+  -webkit-transform: translateX(0%);
+  transition: all 0.3s cubic-bezier(0, 0.54, 0.51, 0.99);
+  -webikit-transition: all 0.3s cubic-bezier(0, 0.54, 0.51, 0.99);
+  opacity: 1;
+}
+
+/* 遮盖层 */
+.cover{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* list内容 */
+.content{
+  margin-left: 40rpx;
+  height: 400rpx;
+}
+.title{
+  width: 100%;
+  float: left;
+  font-size: 14px;
+  color: #757575;
+}
+.gridview{
+  width: 28%;
+  height: 80rpx;
+  float: left;
+  margin: 20rpx 3% 20rpx 0;
+  border: 1rpx solid #EDEDED;
+  border-radius: 10rpx;
+  font-size: 16px;
+  color: #222222;
+  line-height: 38px;
+  text-align: center;
+}
+.selected{
+  background-color: #E8F0FD;
+  color: #4087F3;
+  border: 1rpx solid #E8F0FD;
+}
