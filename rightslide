@@ -1,0 +1,24 @@
+<view>
+  <view class="container {{rightSlideShow}}" catchtouchmove="move">
+    <!-- 组件列表 -->
+    <view class="content" wx:for="{{slideList}}" wx:key="key">
+      <view>
+        <text class="title">{{item.items.title}}</text>
+        <view wx:for="{{item.items.optionList}}" wx:key="key">
+          <view class="{{item.checked ? 'gridview selected' : 'gridview'}}"  data-id="{{item.id}}" data-parent="{{item.parent}}" bindtap="tapSubMenu">
+            <view>{{item.name}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 按钮 -->
+    <view class="button">
+      <view class="cancel" bindtap="cancel">取消</view>
+      <view class="define" bindtap="define">确定</view>
+    </view>
+  </view>
+
+  <!-- 遮盖层 -->
+  <view class="{{cover}}" catchtouchmove="move" bindtap="clear"></view>
+</view>
